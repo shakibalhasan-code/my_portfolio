@@ -2,6 +2,7 @@ class ImagesUtils {
   static const String imagesPath = 'assets/images';
 
   static const String myPic = '$imagesPath/profile_pic.png';
+  static const String cover = '$imagesPath/cover.png';
   static const String android = '$imagesPath/android.svg';
   static const String github = '$imagesPath/github.svg';
   static const String figma = '$imagesPath/figma.svg';

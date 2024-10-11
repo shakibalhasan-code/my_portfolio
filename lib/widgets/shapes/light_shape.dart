@@ -12,7 +12,7 @@ class LightShape extends StatelessWidget {
           color: AppColors.themeColorLight,
           borderRadius: BorderRadius.circular(20)),
       child: Padding(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: child,
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_web_app/screens/home_screen.dart';
+import 'package:my_web_app/screens/splash_screen.dart';
 import 'package:my_web_app/utils/colors.dart';
 
 void main() {
@@ -29,10 +30,11 @@ class MyApp extends StatelessWidget {
                   textStyle: const TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontWeight: FontWeight.bold)))),
+                      fontWeight: FontWeight.bold))),
+          iconTheme: const IconThemeData(color: Colors.white)),
       home: const Scaffold(
         backgroundColor: AppColors.themeColor,
-        body: HomeScreen(),
+        body: SelectionArea(child: SplashScreen()),
       ),
     );
   }
