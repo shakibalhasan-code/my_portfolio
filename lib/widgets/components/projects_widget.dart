@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_web_app/utils/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectsWidget extends StatelessWidget {
   final String projectName;
@@ -27,9 +28,26 @@ class ProjectsWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              projectName,
-              style: Theme.of(context).textTheme.bodyMedium,
+            Row(
+              children: [
+                Text(
+                  projectName,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                const Spacer(),
+                IconButton(
+                    onPressed: () async {
+                      if (projectLink.isEmpty) {
+                        return;
+                      }
+                      final Uri _url = Uri.parse(projectLink);
+                      launchUrl(_url);
+                    },
+                    icon: const Icon(
+                      Icons.remove_red_eye,
+                      color: Colors.white,
+                    ))
+              ],
             ),
             const SizedBox(
               height: 3,

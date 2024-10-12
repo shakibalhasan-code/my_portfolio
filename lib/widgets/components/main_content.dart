@@ -3,8 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:my_web_app/utils/colors.dart';
 import 'package:my_web_app/utils/images_utils.dart';
+import 'package:my_web_app/widgets/sections/course_section.dart';
 import 'package:my_web_app/widgets/sections/cover_section.dart';
 import 'package:my_web_app/widgets/sections/experence_section.dart';
+import 'package:my_web_app/widgets/sections/license_and_certificate.dart';
 import 'package:my_web_app/widgets/sections/project_section.dart';
 
 class MainContent extends StatelessWidget {
@@ -16,6 +18,7 @@ class MainContent extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
               height: 10,
@@ -26,6 +29,8 @@ class MainContent extends StatelessWidget {
             ),
             const ExperenceSection(),
             const ProjectSection(),
+            const CourseSection(),
+            const LicenseAndCertificateSection(),
             const SizedBox(
               height: 10,
             ),
