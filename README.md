@@ -1,16 +1,9 @@
 # Complete & Responsive Flutter Portfolio Site
 
-A new Flutter project for portfolio
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+While this is free & open sources code you can use it but you have to mention the orginal link or credit.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Thanks
+Tutorial: 
