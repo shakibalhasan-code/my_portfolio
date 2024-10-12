@@ -1,6 +1,6 @@
-# my_web_app
+# Complete & Responsive Flutter Portfolio Site
 
-A new Flutter project.
+A new Flutter project for portfolio
 
 ## Getting Started
 
