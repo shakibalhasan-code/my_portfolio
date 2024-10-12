@@ -9,6 +9,7 @@ class TextData {
       'First of all it will GET all the products throw api and then all the products will show as a list into a good stylish itemview. There is a + - iconButton for increasing/decreasing. Restaurant member can chose multiple product then place on Make Order button. After press it will call POST sell endpoint to add sell. Worked with backend team member';
   static const String p1Date = 'Sep 26 2024 - Oct 20 2024';
   static const String p1Link = '';
+  static const List<String> p1_used_skill = ['restAPI', 'getX'];
 
   //project2
   static const String p2Name =
@@ -17,6 +18,7 @@ class TextData {
       'On this project i developed 2 Apps & 1 Admin panel on Flutter Framework. Customers can report their products, after complaint from the admin panel admin will can be assign registered worker/eng to the reported complaint. Then on worker\'s dashboard it will be visible and worker will start work on that. There is a also schedule system i added , direct calling/ attendance system and more ';
   static const String p2Date = 'June 3 2024 - July 28 2024';
   static const String p2Link = '';
+  static const List<String> p2_used_skill = ['Firebase', 'getX'];
 
   //experience
   //ex1

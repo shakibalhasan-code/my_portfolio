@@ -46,6 +46,7 @@ class CustomIcon extends StatelessWidget {
                                 if (link.isEmpty) {
                                   return;
                                 } else {
+                                  Navigator.pop(context);
                                   final Uri _url = Uri.parse(link);
                                   launchUrl(_url);
                                 }

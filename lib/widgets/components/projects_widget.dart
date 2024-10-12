@@ -23,7 +23,7 @@ class ProjectsWidget extends StatelessWidget {
           color: AppColors.themeColorLight,
           borderRadius: BorderRadius.circular(20)),
       child: Padding(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -48,10 +48,43 @@ class ProjectsWidget extends StatelessWidget {
                 ),
                 Text(projectDate, style: Theme.of(context).textTheme.bodySmall),
               ],
+            ),
+            const SizedBox(height: 10),
+            SizedBox(
+              height: 30,
+              child: SkillBoxWidget(),
             )
           ],
         ),
       ),
     );
+  }
+
+  ListView SkillBoxWidget() {
+    return ListView.builder(
+        itemCount: used!.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          final singleUsed = used![index];
+          return Padding(
+            padding: const EdgeInsets.only(left: 5.0),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8, right: 8),
+                child: Center(
+                  child: Text(
+                    singleUsed,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+          );
+        });
   }
 }

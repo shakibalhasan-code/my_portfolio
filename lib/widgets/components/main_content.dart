@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:my_web_app/utils/colors.dart';
 import 'package:my_web_app/utils/images_utils.dart';
 import 'package:my_web_app/widgets/sections/cover_section.dart';
 import 'package:my_web_app/widgets/sections/experence_section.dart';
@@ -24,7 +25,20 @@ class MainContent extends StatelessWidget {
               height: 10,
             ),
             const ExperenceSection(),
-            const ProjectSection()
+            const ProjectSection(),
+            const SizedBox(
+              height: 10,
+            ),
+            Center(
+              child: Text('Developed on Flutter',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall!
+                      .copyWith(color: Colors.grey)),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
           ],
         ),
       ),

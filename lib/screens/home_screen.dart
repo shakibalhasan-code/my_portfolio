@@ -26,44 +26,41 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.themeColor,
-      appBar: Responsive.isDesktop(context)
-          ? null
-          : AppBar(
-              backgroundColor: AppColors.themeColorLight,
-              iconTheme: const IconThemeData(),
-              title: Text(
-                'Shakib A Hasan',
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-            ),
-      drawer: Responsive.isDesktop(context) ? null : const Sidemenu(),
-      body: Center(
-        child: Container(
-          constraints: const BoxConstraints(maxWidth: maxWidth),
-          child: Responsive.isMobile(context)
-              ? const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Expanded(child: MainContent()),
-                )
-              : const Row(
-                  children: [
-                    Expanded(flex: 1, child: Sidemenu()),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                        flex: 3,
-                        child: SingleChildScrollView(
-                          child: MainContent(),
-                        )),
-                    SizedBox(
-                      width: 10,
-                    ),
-                  ],
+        backgroundColor: AppColors.themeColor,
+        appBar: Responsive.isDesktop(context)
+            ? null
+            : AppBar(
+                backgroundColor: AppColors.themeColorLight,
+                iconTheme: const IconThemeData(),
+                title: Text(
+                  'Shakib A Hasan',
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
-        ),
-      ),
-    );
+              ),
+        drawer: Responsive.isDesktop(context) ? null : const Sidemenu(),
+        body: Responsive.isDesktop(context)
+            ? Center(
+                child: Container(
+                  constraints: const BoxConstraints(maxWidth: maxWidth),
+                  child: Responsive.isMobile(context)
+                      ? const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Expanded(child: MainContent()),
+                        )
+                      : const Row(
+                          children: [
+                            Expanded(flex: 1, child: Sidemenu()),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(flex: 3, child: MainContent()),
+                            SizedBox(
+                              width: 10,
+                            ),
+                          ],
+                        ),
+                ),
+              )
+            : const MainContent());
   }
 }
